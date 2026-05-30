@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kachaoba.ge ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center;
+background:linear-gradient(-45deg,#ff4b6e,#ff758c,#ff9a9e,#ffd1dc);
+background-size:400% 400%;animation:bg 10s ease infinite;font-family:Arial,sans-serif;
+}
+@keyframes bg{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.message h1{color:white;font-size:4rem;text-align:center;animation:pulse 2s infinite;text-shadow:0 0 20px rgba(255,255,255,.8);}
+@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+.heart{position:absolute;color:white;font-size:25px;animation:fall linear infinite;}
+@keyframes fall{from{transform:translateY(-100px);}to{transform:translateY(110vh);}}
+</style>
+</head>
+<body>
+<div class="message">
+<h1>Lizaa Chemo Lamazoo ❤️</h1>
+</div>
+<script>
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*4+3)+"s";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),7000);
+}
+setInterval(createHeart,250);
+</script>
+</body>
+</html>
